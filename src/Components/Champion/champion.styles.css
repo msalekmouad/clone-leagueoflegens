@@ -1,0 +1,55 @@
+.champ-card{
+    box-sizing: border-box;
+    max-width: 100px;
+    height: auto;
+    position: relative;
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    margin: 15px;
+}
+
+.champ-image > img{
+    max-width: auto;
+    max-height: 100px;
+}
+
+.champ-image{
+    grid-area: image;
+    position: relative;
+    border: 1px solid transparent;
+
+	  border-image: linear-gradient(to right, #01e4fe 0%, #0191a1 100%);
+
+      border-image-slice: 1;
+}
+
+.champ-image.active{
+    box-shadow: 0 0 10px 4px rgba(192, 252, 253, .4), inset 0 0 5px 2px rgba(192, 252, 253, .3)!important;
+    
+    border: 2px solid transparent!important;
+    border-image: linear-gradient(to bottom, #01e4fe 0%, #0191a1 100%)!important;
+
+    border-image-slice: 1!important;
+
+    cursor: pointer;
+}
+
+.champ-image:hover{
+    box-shadow: 0 0 10px 4px rgba(192, 252, 253, .4), inset 0 0 5px 2px rgba(192, 252, 253, .3);
+    
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #01e4fe 0%, #0191a1 100%);
+
+    border-image-slice: 1;
+
+    cursor: pointer;
+}
+
+.champ-name{
+    position: relative;
+    grid-area: name;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white!important;
+    font-weight: 100;
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "name":"Lux",
+        "description":"Luxanna Crownguard est originaire de Demacia, un royaume isolationniste où la magie inspire la peur et la méfiance. Capable de plier la lumière à sa volonté, elle a grandi dans la crainte d'être un jour exilée et a été contrainte de dissimuler son pouvoir pour préserver l'honneur de sa famille",
+        "image":"/images/lux.jpg",
+        "type":"mage"
+     },
+     {
+        "id":2,
+        "name":"Shaco",
+        "description":"Fabriqué il y a longtemps pour servir de jouet à un prince qui se sentait seul, Shaco est une marionnette enchantée qui se repaît désormais de meurtres et de chaos. Corrompu par la magie noire et la perte de sa chère mission, le pantin autrefois gentil ne se réjouit plus que du malheur des âmes qu'il tourmente. ",
+        "image":"/images/shaco.jpg",
+        "type":"assassin"
+     },
+     {
+        "id":3,
+        "name":"Warwick",
+        "description":"Warwick est un monstre qui chasse dans les rues grisâtres de Zaun. Transformé par des expériences horribles, son corps est désormais muni d'un système intriqué de chambres et de pompes qui injecte une rage alchimique dans ses veines. Surgissant des ombres ",
+        "image":"/images/warwick.jpg",
+        "type":"brawler"
+     },
+     {
+        "id":4,
+        "name":"Jinx",
+        "description":"Criminelle hystérique et impulsive de Zaun, Jinx ne vit que pour semer le chaos sans se préoccuper des conséquences. Équipée d'un arsenal d'armes mortelles, elle déchaîne les explosions les plus spectaculaires en ne laissant dans son sillage que destruction et panique. Jinx déteste s'ennuyer et c'est dans la bonne humeur qu'elle sème le chaos dans tous les endroits qu'elle traverse.",
+        "image":"/images/jinx.jpg",
+        "type":"marksman"
+     }
+]

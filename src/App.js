@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import {
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import {connect} from "react-redux"
+import {champions_list} from "./assets/champions"
+import _ from "lodash"
+import {Animated} from "react-animated-css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+//pages
+import Home from "./Pages/Home/home.component"
+import MatchMaking from "./Pages/MatchMaking/match-making.component"
+
+//actions
+import {setChampions} from "./redux/champions/champions.action"
+
+class App extends Component{
+  
+
+  componentDidMount(){
+    this.props.setChampions(_.shuffle(champions_list))
+  }
+  
+  
+  render(){
+
+    let {selectedChamp} = this.props;
+    return (
+      <div className="App vh-100 m-0 ">
+        <Switch>
+            <Route exact path="/" component={Home}/>
+            {(selectedChamp !== "") ? <Route exact path="/matching" component={MatchMaking} /> : <Redirect to="/" />}
+          </Switch>
+      </div>
+    )
+  }
 }
 
-export default App;
+const mapStateToProps = (state, ownProps) => ({
+  selectedChamp: state.champions.selected_champ
+})
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  setChampions: data => dispatch(setChampions(data))
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
